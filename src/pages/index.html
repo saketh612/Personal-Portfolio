@@ -23,27 +23,28 @@
 
         <a href="#" class="logo">Saketh.</a>
 
-        <div class="bx bx-menu" id="menu-icon"></div>
+        <div class="bx bx-menu" id="menu-icon" onclick="openmenu()"></div>
+        
 
-        <nav class="navbar">
+        <nav class="navbar" id ="side-menu">
+            <div class="bx bx-window-close" id="close-icon" onclick="closemenu()"></div>
             <a href="#" class="active">Home</a>
             <a href="#">About</a>
             <a href="#">My Work</a>
-            <a href="#">Project</a>
+            <a href="#">Project</a> 
         </nav>
 
     </header>
 
-    <div class="home">
+    <div class="home" id="Home">
         <div class="home-content">
             <h1>Hi, I'm <span class="special" data-text="Saketh.Repaka">Saketh.Repaka</span></h1>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Sit amet dictum sit amet justo
+                I'm a final year B.Tech student pursuing Electronics and Instrumentation at BITS Pilani Hyderabad Campus. I'm passionate about full-stack web development and excited to bring my skills to a full-stack development role and contribute to a dynamic team!"
             </p>
 
             <div class="btn-box">
-                <a  target ="_blank" href="Data Structures and Algorithms Made Easy_ Data Structures and Algorithmic Puzzles ( PDFDrive ).pdf" class="btn">Download CV</a>
+                <a  target ="_blank" href="__dirname/public/pic.jpeg" class="btn">Download CV</a>
                 <a href="#" class="btn">Contact Me</a>
             </div>
         </div>
@@ -58,7 +59,7 @@
                     <img src="pic.jpeg">
                 </div>
                 <div class="about-col-2">
-                    <h1 class="sub-title">About Me</h1>
+                    <h1 class="sub-title" id="About-me">About Me</h1>
 
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('Education')">Education</p>
@@ -98,7 +99,7 @@
     <div id="Projects">
 
         <div class="container">
-            <h1 class="sub-title">My Work</h1>
+            <h1 class="sub-title" style="text-align: center;">My Work</h1>
             <div class="work-list">
                 <div class="work">
                     <img
@@ -158,6 +159,25 @@
 
             event.currentTarget.classList.add("active-link");
             document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+
+    <script>
+
+        const sidemenu = document.getElementById("side-menu")
+        const Home = document.getElementById("Home")
+
+        function openmenu()
+        {
+            sidemenu.style.right ="0%"
+            Home.style.marginTop ="200px";
+        }
+
+        function closemenu()
+        {
+            sidemenu.style.right ="-100%"
+            Home.style.marginTop ="20px";
         }
 
     </script>
