@@ -13,7 +13,7 @@ app.get('/contact',(req,res)=>{
 })
 
 app.get('/CV',(req,res)=>{
-    res.sendFile(path.join(__dirname,'public/SAF.pdf'));
+    res.sendFile(path.join(__dirname,'public/Saketh_CV.pdf'));
 })
 
 const port = process.env.PORT || 3000;
