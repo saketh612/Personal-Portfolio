@@ -23,14 +23,14 @@
 
         <a href="#" class="logo">Saketh.</a>
 
-        <div class="bx bx-menu" id="menu-icon" onclick="openmenu()"></div>
-        
+        <div class="bx bx-menu" id="menu-icon"></div>
 
-        <nav class="navbar" id ="side-menu">
-            <div class="bx bx-window-close" id="close-icon" onclick="closemenu()"></div>
+
+        <nav class="navbar" id="side-menu">
+            <!-- <div class="bx bx-window-close" id="close-icon" ></div> -->
             <a href="#Home" class="active">Home</a>
             <a href="#about">About</a>
-            <a href="#Projects">Project</a> 
+            <a href="#Projects">Project</a>
         </nav>
 
     </header>
@@ -39,11 +39,13 @@
         <div class="home-content">
             <h1>Hi, I'm <span class="special" data-text="Saketh.Repaka">Saketh.Repaka</span></h1>
             <p>
-                I'm a final year B.Tech student pursuing Electronics and Instrumentation at BITS Pilani Hyderabad Campus. I'm passionate about full-stack web development and excited to bring my skills to a full-stack development role and contribute to a dynamic team!"
+                I'm a final year B.Tech student pursuing Electronics and Instrumentation at BITS Pilani Hyderabad
+                Campus. I'm passionate about full-stack web development and excited to bring my skills to a full-stack
+                development role and contribute to a dynamic team!"
             </p>
 
             <div class="btn-box">
-                <a  target ="_blank" href="/CV"  class="btn">Download CV</a>
+                <a target="_blank" href="/CV" class="btn">Download CV</a>
                 <a href="/contact" class="btn">Contact Me</a>
             </div>
         </div>
@@ -55,7 +57,7 @@
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="pic.jpeg">
+                    <img src="pic.jpeg" style="object-fit: cover;">
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title" id="About-me">About Me</h1>
@@ -101,8 +103,8 @@
             <h1 class="sub-title" style="text-align: center;">My Work</h1>
             <div class="work-list">
                 <div class="work">
-                    <img
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8S3z339B2ZUdQij9Xoul6tmNqwKtG4SN5XQ&usqp=CAU">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8S3z339B2ZUdQij9Xoul6tmNqwKtG4SN5XQ&usqp=CAU"
+                        style="object-fit: cover;">
                     <div class="layer">
                         <h3>Chat-GPT Clone</h3>
                         <p>orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -111,17 +113,18 @@
                     </div>
                 </div>
                 <div class="work">
-                    <img
-                        src="https://nevonprojects.com/wp-content/uploads/2021/07/herb-grocery-shopping-app-andoid-web-main.jpg">
-                        <div class="layer">
-                            <h3>Shopping App</h3>
-                            <p>orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                                labore et
-                                dolore magna aliqua. Sit amet dictum sit amet justo</p>
-                        </div>
+                    <img src="https://nevonprojects.com/wp-content/uploads/2021/07/herb-grocery-shopping-app-andoid-web-main.jpg"
+                        style="object-fit: cover;">
+                    <div class="layer">
+                        <h3>Shopping App</h3>
+                        <p>orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et
+                            dolore magna aliqua. Sit amet dictum sit amet justo</p>
+                    </div>
                 </div>
                 <div class="work">
-                    <img src="https://lh6.googleusercontent.com/2wyK-EmkaLym5P-DvQCIFL_TeEmypxf-4j_St9QB2br34tsWhjAeeUiddpKboPkKsjZ2JPX-pezjPqZiWossTYHXiiN0z7UJaXUmjzR5TC9VhMIx3dkQT3DfIBMnbAhDC6kX6FuI">
+                    <img src="https://lh6.googleusercontent.com/2wyK-EmkaLym5P-DvQCIFL_TeEmypxf-4j_St9QB2br34tsWhjAeeUiddpKboPkKsjZ2JPX-pezjPqZiWossTYHXiiN0z7UJaXUmjzR5TC9VhMIx3dkQT3DfIBMnbAhDC6kX6FuI"
+                        style="object-fit: cover;">
                     <div class="layer">
                         <h3>Machine Learning</h3>
                         <p>orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -167,17 +170,45 @@
         const sidemenu = document.getElementById("side-menu")
         const Home = document.getElementById("Home")
 
-        function openmenu()
-        {
-            sidemenu.style.right ="0%"
-            Home.style.marginTop ="200px";
-        }
 
-        function closemenu()
-        {
-            sidemenu.style.right ="-100%"
-            Home.style.marginTop ="20px";
-        }
+
+            let menu = false;
+
+            const menuButton = document.getElementById("menu-icon")
+            menuButton.addEventListener('click', toggle);
+
+            function toggle() {
+                menu = !menu;
+                if (menu) {
+                    sidemenu.style.right = "0%"
+                    Home.style.marginTop ="200px";
+                    console.log("opened")
+                }
+
+                else
+                {
+                    sidemenu.style.right ="-100%"
+                    Home.style.marginTop ="20px";
+                    console.log("closed")
+
+                }
+            }
+
+        
+
+        // function openmenu()
+        // {
+        //     sidemenu.style.right ="0%"
+        //     Home.style.marginTop ="200px";
+        //     console.log("opened")
+        // }
+
+        // function closemenu()
+        // {
+        //     sidemenu.style.right ="-100%"
+        //     Home.style.marginTop ="20px";
+        //     console.log("closed")
+        // }
 
     </script>
 

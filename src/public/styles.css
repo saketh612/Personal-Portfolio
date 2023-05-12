@@ -429,6 +429,7 @@ form input,form textarea{
         line-height: 1.5;
     }
 
+
 .logo
 {
     font-size: 2.5rem;
@@ -459,6 +460,7 @@ form input,form textarea{
     background: #00abf0;
     position: fixed;
     top:0;
+    bottom: 0;
     right: 0;
     width: 100%;
     right: -100%;
