@@ -21,9 +21,12 @@
 
     <header class="header">
 
-        <a href="#" class="logo">Saketh.</a>
 
-        <div class="bx bx-menu" id="menu-icon"></div>
+        <div id="main-header" style="display: flex; justify-content: space-between; ">
+            <a href="/" class="logo">Saketh.</a>
+
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
 
 
         <nav class="navbar" id="side-menu">
@@ -172,29 +175,28 @@
 
 
 
-            let menu = false;
+        let menu = false;
 
-            const menuButton = document.getElementById("menu-icon")
-            menuButton.addEventListener('click', toggle);
+        const menuButton = document.getElementById("menu-icon")
+        menuButton.addEventListener('click', toggle);
 
-            function toggle() {
-                menu = !menu;
-                if (menu) {
-                    sidemenu.style.right = "0%"
-                    Home.style.marginTop ="200px";
-                    console.log("opened")
-                }
-
-                else
-                {
-                    sidemenu.style.right ="-100%"
-                    Home.style.marginTop ="20px";
-                    console.log("closed")
-
-                }
+        function toggle() {
+            menu = !menu;
+            if (menu) {
+                sidemenu.style.right = "0%"
+                sidemenu.style.display = "block"
+                console.log("opened")
             }
 
-        
+            else {
+                sidemenu.style.right = "-100%"
+                sidemenu.style.display = "none"
+                console.log("closed")
+
+            }
+        }
+
+
 
         // function openmenu()
         // {
