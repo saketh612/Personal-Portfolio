@@ -11,16 +11,18 @@
 <body>
     <header class="header">
 
-        <a href="/" class="logo">Saketh.</a>
+        <div id="main-header" style="display: flex; justify-content: space-between; ">
+            <a href="/" class="logo">Saketh.</a>
 
-        <div class="bx bx-menu" id="menu-icon" onclick="openmenu()" ondblclick="closemenu()"></div>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
         
 
-        <nav class="navbar" id ="side-menu">
-            <div class="bx bx-window-close" id="close-icon" onclick="closemenu()"></div>
+        <nav class="navbar" id="side-menu">
+            <!-- <div class="bx bx-window-close" id="close-icon" ></div> -->
             <a href="/#Home" class="active">Home</a>
             <a href="/#about">About</a>
-            <a href="/#Projects">Project</a> 
+            <a href="/#Projects">Project</a>
         </nav>
 
     </header>
@@ -54,5 +56,51 @@
     <div class="copyright" style="margin-top: 200px;">
         <p>Copyright © Saketh Repaka</p>
     </div>
+
+    <script>
+
+        const sidemenu = document.getElementById("side-menu")
+        const Home = document.getElementById("Home")
+
+
+
+        let menu = false;
+
+        const menuButton = document.getElementById("menu-icon")
+        menuButton.addEventListener('click', toggle);
+
+        function toggle() {
+            menu = !menu;
+            if (menu) {
+                sidemenu.style.right = "0%"
+                sidemenu.style.display = "block"
+                console.log("opened")
+            }
+
+            else {
+                sidemenu.style.right = "-100%"
+                sidemenu.style.display = "none"
+                console.log("closed")
+
+            }
+        }
+
+
+
+        // function openmenu()
+        // {
+        //     sidemenu.style.right ="0%"
+        //     Home.style.marginTop ="200px";
+        //     console.log("opened")
+        // }
+
+        // function closemenu()
+        // {
+        //     sidemenu.style.right ="-100%"
+        //     Home.style.marginTop ="20px";
+        //     console.log("closed")
+        // }
+
+    </script>
 </body>
 </html>
