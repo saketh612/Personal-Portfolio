@@ -12,9 +12,9 @@ app.get('/contact',(req,res)=>{
     res.sendFile(path.join(__dirname,'pages/contact.html'));
 })
 
-app.get('/CV',(req,res)=>{
-    res.sendFile(path.join(__dirname,'public/Saketh_CV.pdf'));
-})
+// app.get('/CV',(req,res)=>{
+//     res.sendFile(path.join(__dirname,'public/Saketh_CV.pdf'));
+// })
 
 const port = process.env.PORT || 3000;
 
