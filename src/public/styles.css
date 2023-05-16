@@ -83,6 +83,36 @@ body{
     display: none;
 }
 
+#sun-icon{
+    font-size: 1.7rem;
+    color : var(--text-color);
+    font-weight: 500;
+    margin-left: 3.5rem; 
+    transition: .3s;
+    cursor: pointer;
+    display: block;
+    /* //margin-top: -30px; */
+}
+
+#sun-icon:hover
+{
+    color: yellow;
+}
+
+#moon-icon{
+    font-size: 1.7rem;
+    color : var(--text-color);
+    font-weight: 500;
+    margin-left: 3.5rem; 
+    transition: .3s;
+    cursor: pointer;
+    display: none;
+}
+
+#moon-icon:hover
+{
+    color: gray;
+}
 section{
     min-height: 100vh;
     padding: 10rem 9% 2rem;

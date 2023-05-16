@@ -31,6 +31,8 @@
 
         <nav class="navbar" id="side-menu">
             <!-- <div class="bx bx-window-close" id="close-icon" ></div> -->
+            <div class="bx bxs-sun" id="sun-icon" style="display: inline-block;"></div>
+            <div class="bx bxs-moon" id="moon-icon"></div>
             <a href="#Home" class="active">Home</a>
             <a href="#about">About</a>
             <a href="#Projects">Project</a>
@@ -213,6 +215,34 @@
         // }
 
     </script>
+
+<script>
+    const brightIcon = document.getElementById("sun-icon");
+    const moonIcon = document.getElementById("moon-icon")
+    const footer = document.getElementsByClassName("copyright")[0]
+
+    let inverse = true;
+
+    brightIcon.addEventListener("click", changeMode);
+    moonIcon.addEventListener("click", darkmode)
+
+    function darkmode() {
+        document.body.style.backgroundColor = "black";
+        document.body.style.setProperty("--text-color", "#ededed");
+        brightIcon.style.display = "inline-block";
+        moonIcon.style.display = "none";
+        footer.style.background ="#29252"
+    }
+
+    function changeMode() {
+
+        document.body.style.backgroundColor = "white";
+        document.body.style.setProperty("--text-color", "black");
+        moonIcon.style.display = "inline-block";
+        brightIcon.style.display = "none";
+        footer.style.background ="lightgrey"
+    }
+</script>
 
     <script src="source.js"></script>
 
