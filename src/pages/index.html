@@ -108,7 +108,7 @@
             <h1 class="sub-title" style="text-align: center;">My Work</h1>
             <div class="work-list">
                 <div class="work">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8S3z339B2ZUdQij9Xoul6tmNqwKtG4SN5XQ&usqp=CAU"
+                    <img src="https://uploads-ssl.webflow.com/5b105a0c66f2f636c7884a17/64063dbcad97bd421b437096_chatgpt.jpg"
                         style="object-fit: cover;">
                     <div class="layer">
                         <h3>Chat-GPT Clone</h3>
@@ -219,7 +219,7 @@
 <script>
     const brightIcon = document.getElementById("sun-icon");
     const moonIcon = document.getElementById("moon-icon")
-    const footer = document.getElementsByClassName("copyright")[0]
+    let footer = document.getElementsByClassName("copyright")[0]
 
     let inverse = true;
 
@@ -231,7 +231,7 @@
         document.body.style.setProperty("--text-color", "#ededed");
         brightIcon.style.display = "inline-block";
         moonIcon.style.display = "none";
-        footer.style.background ="#29252"
+        footer.style.backgroundColor = "#292524";
     }
 
     function changeMode() {
@@ -240,7 +240,7 @@
         document.body.style.setProperty("--text-color", "black");
         moonIcon.style.display = "inline-block";
         brightIcon.style.display = "none";
-        footer.style.background ="lightgrey"
+        footer.style.backgroundColor = "lightgrey";
     }
 </script>
 
