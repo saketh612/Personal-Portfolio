@@ -451,6 +451,16 @@ form input,form textarea{
     cursor: pointer;
 }
 
+#external-link{
+    font-size: 2.25rem;
+    color : var(--text-color);
+    font-weight: 500;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+
+
 @media only screen and (max-width: 576px)
 {
     .home-content h1{
